@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Surprise for Garima ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: #77334f;
+  background: linear-gradient(135deg, #ffe0ec, #fff4f8, #f1e4ff);
+  overflow-x: hidden;
+}
+
+#hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.heart {
+  position: absolute;
+  bottom: -35px;
+  animation: floatUp linear forwards;
+  opacity: .8;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+main {
+  width: min(92%, 560px);
+  margin: 28px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255,255,255,.82);
+  border: 1px solid white;
+  border-radius: 26px;
+  padding: 28px 22px;
+  margin-bottom: 22px;
+  text-align: center;
+  box-shadow: 0 12px 35px #c45a8520;
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bow {
+  font-size: 55px;
+  margin: 5px;
+}
+
+h1 {
+  color: #e74789;
+  font-size: clamp(32px, 8vw, 45px);
+  margin: 14px 0;
+}
+
+h2 {
+  color: #d34b83;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.small {
+  font-size: 14px;
+  color: #a45b7c;
+}
+
+button {
+  background: linear-gradient(100deg, #ff609b, #d878e9);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 13px 22px;
+  margin: 8px 3px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 16px #d34b8330;
+  transition: transform .2s;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+button:focus-visible {
+  outline: 3px solid #9c3470;
+  outline-offset: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+.letter {
+  background: #fff1f7;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: left;
+  margin-top: 18px;
+}
+
+.letter p {
+  margin: 10px 0;
+}
+
+.quote {
+  background: #fff0f8;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 18px 0;
+}
+
+#hugMessage {
+  font-size: 18px;
+  color: #d04481;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 10px 25px;
+  font-size: 13px;
+  color: #a45b7c;
+}
+
+@media (max-width: 420px) {
+  main {
+    margin: 15px auto;
+  }
+
+  .card {
+    padding: 24px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts" aria-hidden="true"></div>
+
+<main>
+
+  <!-- PAGE 1: WELCOME -->
+
+  <section class="card" id="page1">
+
+    <div>✨ 💗 ✨</div>
+    <div class="bow">🎀</div>
+
+    <p class="small">
+      A little something, made just for you...
+    </p>
+
+    <h1>Hey Garima! 💕</h1>
+
+    <p>
+      Someone has a little surprise for you.
+      <br>
+      Just a few clicks to see how special you are! 🌷
+    </p>
+
+    <div class="bow">🧸💖</div>
+
+    <button onclick="openPage(2)">
+      Open Your Surprise 💌
+    </button>
+
+  </section>
+
+
+  <!-- PAGE 2: LOVE LETTER -->
+
+  <section class="card hidden" id="page2">
+
+    <div class="bow">💌</div>
+
+    <h2>A Special Letter For You</h2>
+
+    <p>
+      Garima, there's something I wanted
+      to tell you... ❤️
+    </p>
+
+    <div class="letter">
+
+      <p>Dear Garima, 💗</p>
+
+      <p>
+        You're not just someone I know,
+        you're someone truly special to me.
+      </p>
+
+      <p>
+        You make ordinary moments feel
+        beautiful, and your smile has a way
+        of making a day feel brighter.
+      </p>
+
+      <p>
+        I may not always find the perfect
+        words, but I hope you know that
+        you mean a lot to me.
+      </p>
+
+      <p>
+        I wish you happiness in little things,
+        beautiful memories, peaceful days,
+        and countless reasons to smile.
+      </p>
+
+      <p>
+        Keep being the wonderful person you are.
+        Never forget how special you are. 🌸
+      </p>
+
+      <p>
+        With lots of love and care,
+        <br>
+        <strong>Arpit ❤️</strong>
+      </p>
+
+    </div>
+
+    <button onclick="openPage(3)">
+      One More Surprise ✨
+    </button>
+
+  </section>
+
+
+  <!-- PAGE 3: LOVE MESSAGE -->
+
+  <section class="card hidden" id="page3">
+
+    <div class="bow">💖</div>
+
+    <h1>Sending You All My Love</h1>
+
+    <p>
+      If I could send you a little happiness
+      through this screen, I would send you
+      a thousand smiles. 🥹
+    </p>
+
+    <div class="quote">
+      <p>
+        You are special.
+        <br>
+        You are appreciated.
+        <br>
+        And you deserve so much happiness. 💗
+      </p>
+    </div>
+
+    <div class="bow">🧸💝</div>
+
+    <button onclick="giveHug()">
+      Get Your Virtual Hug 🫂
+    </button>
+
+    <p id="hugMessage" class="hidden" aria-live="polite">
+      🤗 A big warm hug for Garima!
+      <br>
+      Sending you love, smiles and happiness. 💕
+    </p>
+
+    <button onclick="openPage(4)">
+      A Tiny Little Secret 🌷
+    </button>
+
+  </section>
+
+
+  <!-- PAGE 4: FINAL SURPRISE -->
+
+  <section class="card hidden" id="page4">
+
+    <div class="bow">🌷💗🌷</div>
+
+    <h2>One Last Thing, Garima...</h2>
+
+    <p>
+      No special occasion is needed
+      to remind someone that they matter.
+    </p>
+
+    <p>
+      So here's your reminder:
+      <br>
+      <strong>
+        You make this world a little more
+        beautiful just by being you. ❤️
+      </strong>
+    </p>
+
+    <div class="bow">💌</div>
+
+    <p>
+      Made with lots of love,
+      <br>
+      <strong>Arpit ❤️</strong>
+    </p>
+
+    <button onclick="restart()">
+      Read It Again 💕
+    </button>
+
+  </section>
+
+  <footer>
+    A little corner of the internet,
+    made with love by Arpit 💗
+  </footer>
+
+</main>
+
+<script>
+let currentPage = 1;
+
+function openPage(number) {
+  document.getElementById("page" + currentPage)
+    .classList.add("hidden");
+
+  currentPage = number;
+
+  const nextPage = document.getElementById("page" + number);
+  nextPage.classList.remove("hidden");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  burstHearts();
+}
+
+function giveHug() {
+  document.getElementById("hugMessage")
+    .classList.remove("hidden");
+
+  burstHearts();
+  burstHearts();
+}
+
+function restart() {
+  document.getElementById("page" + currentPage)
+    .classList.add("hidden");
+
+  currentPage = 1;
+
+  document.getElementById("page1")
+    .classList.remove("hidden");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  burstHearts();
+}
+
+function createHeart() {
+  const container = document.getElementById("hearts");
+  const heart = document.createElement("span");
+
+  const symbols = ["❤️", "💕", "💗", "💖", "🌸"];
+
+  heart.className = "heart";
+  heart.textContent =
+    symbols[Math.floor(Math.random() * symbols.length)];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 20) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  container.appendChild(heart);
+
+  heart.addEventListener("animationend", function() {
+    heart.remove();
+  });
+}
+
+function burstHearts() {
+  for (let i = 0; i < 18; i++) {
+    createHeart();
+  }
+}
+
+// Floating hearts in the background
+setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
